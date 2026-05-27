@@ -41,10 +41,12 @@ export default async function GiftsPage() {
     <main className="app-shell">
       <div className="container-mobile">
         <Topbar backHref="/" />
-        <PageHeader
-          title="Lista de Presentes"
-          subtitle="Seu presente e uma forma de celebrar conosco esse momento tao especial."
-        />
+        <div className="gifts-intro">
+          <PageHeader
+            title="Lista de Presentes"
+            subtitle="Seu presente e uma forma de celebrar conosco esse momento tao especial."
+          />
+        </div>
 
         <section className="gift-grid">
           {gifts.map((gift) => (
