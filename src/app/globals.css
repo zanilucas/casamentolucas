@@ -684,3 +684,315 @@ textarea {
     grid-column: 1 / -1;
   }
 }
+
+/* Identidade visual Adrieli & Lucas: aquarela botanica, verde profundo e dourado. */
+:root {
+  --cream: #f7f8f3;
+  --cream-strong: #edf5ef;
+  --gold: #a06f24;
+  --gold-dark: #90621d;
+  --sage: #92bfa7;
+  --rose: #d8c8b9;
+  --text: #273b35;
+  --text-medium: #6d706a;
+  --text-light: #8f968e;
+  --white: rgba(255, 255, 252, 0.88);
+  --border: rgba(142, 174, 153, 0.28);
+  --danger: #a84d46;
+  --success: #2f7f69;
+}
+
+body {
+  background: #f7f8f3;
+  color: var(--text);
+  font-family: var(--font-body), Arial, sans-serif;
+}
+
+.app-shell {
+  position: relative;
+  overflow: hidden;
+  background:
+    url("/brand/eucalyptus-top-left.png") top left / min(34vw, 300px) auto no-repeat,
+    url("/brand/eucalyptus-top-right.png") top right / min(34vw, 300px) auto no-repeat,
+    url("/brand/eucalyptus-bottom-left.png") bottom left / min(52vw, 390px) auto no-repeat,
+    url("/brand/eucalyptus-bottom-right.png") bottom right / min(48vw, 370px) auto no-repeat,
+    radial-gradient(circle at 18% 18%, rgba(177, 219, 206, 0.24), transparent 18rem),
+    radial-gradient(circle at 85% 72%, rgba(177, 219, 206, 0.18), transparent 18rem),
+    linear-gradient(180deg, #fbfcf8 0%, #f5f8f2 100%);
+}
+
+.app-shell::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  content: "";
+  opacity: 0.34;
+  background-image:
+    linear-gradient(rgba(46, 98, 82, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(46, 98, 82, 0.03) 1px, transparent 1px);
+  background-size: 140px 140px;
+}
+
+.container-mobile {
+  position: relative;
+  z-index: 1;
+}
+
+.topbar {
+  background: rgba(255, 255, 252, 0.82);
+  border-bottom: 1px solid rgba(143, 167, 151, 0.24);
+  backdrop-filter: blur(18px);
+}
+
+.topbar-title {
+  color: #2f7f69;
+  font-family: var(--font-caps), Georgia, serif;
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.back-btn {
+  border-color: rgba(160, 111, 36, 0.42);
+  color: #90621d;
+  font-family: var(--font-caps), Georgia, serif;
+  font-size: 11px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.hero {
+  min-height: calc(100vh - 66px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 62px 22px 44px;
+}
+
+.hero-kicker {
+  margin-bottom: 22px;
+  color: var(--gold-dark);
+  font-family: var(--font-caps), Georgia, serif;
+  font-size: 18px;
+  letter-spacing: 8px;
+  line-height: 1.8;
+  text-transform: uppercase;
+}
+
+.hero-ornament {
+  width: min(72%, 360px);
+  height: 14px;
+  margin: 0 auto 18px;
+  color: transparent;
+  background:
+    linear-gradient(var(--sage), var(--sage)) center / 100% 1px no-repeat,
+    radial-gradient(circle, var(--sage) 0 38%, transparent 40%) center / 52px 12px no-repeat;
+}
+
+.hero-names {
+  color: #2f7f69;
+  font-family: var(--font-script), cursive;
+  font-size: clamp(76px, 20vw, 128px);
+  font-style: normal;
+  line-height: 0.78;
+  text-shadow: 0 2px 0 rgba(255, 255, 255, 0.4);
+}
+
+.hero-amp {
+  display: block;
+  margin: 4px 0;
+  color: #2f7f69;
+  font-size: 0.56em;
+}
+
+.hero-script-note {
+  margin: 18px 0 4px;
+  color: #2f7f69;
+  font-family: var(--font-script), cursive;
+  font-size: clamp(44px, 12vw, 74px);
+  line-height: 1;
+}
+
+.hero-date {
+  color: var(--gold-dark);
+  font-family: var(--font-caps), Georgia, serif;
+  font-size: 17px;
+  letter-spacing: 6px;
+  line-height: 1.7;
+}
+
+.hero-divider,
+.success-divider {
+  background: var(--sage);
+}
+
+.hero-welcome {
+  color: #5f6761;
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 18px;
+  line-height: 1.85;
+}
+
+.info-card,
+.gift-card,
+.pay-gift-info,
+.admin-login,
+.stat-card,
+.entry-card,
+.form-card {
+  background: rgba(255, 255, 252, 0.82);
+  border: 1px solid rgba(142, 174, 153, 0.34);
+  border-radius: 4px;
+  box-shadow: 0 18px 50px rgba(39, 59, 53, 0.07);
+  backdrop-filter: blur(10px);
+}
+
+.info-icon,
+.gift-emoji,
+.success-icon,
+.pay-gift-emoji {
+  color: #2f7f69;
+}
+
+.info-label,
+.field label,
+.stat-label {
+  color: var(--gold-dark);
+  font-family: var(--font-caps), Georgia, serif;
+  letter-spacing: 2.6px;
+}
+
+.info-value,
+.gift-name,
+.section-title,
+.admin-title,
+.pay-gift-name,
+.success-title,
+.page-title {
+  color: #2f7f69;
+  font-family: var(--font-heading), Georgia, serif;
+}
+
+.page-header {
+  padding-top: 48px;
+  background:
+    url("/brand/eucalyptus-top-right.png") top right / 220px auto no-repeat,
+    linear-gradient(180deg, rgba(255, 255, 252, 0.55), transparent);
+}
+
+.page-ornament {
+  color: transparent;
+  height: 12px;
+  background:
+    linear-gradient(var(--sage), var(--sage)) center / 170px 1px no-repeat,
+    radial-gradient(circle, var(--sage) 0 38%, transparent 40%) center / 44px 10px no-repeat;
+}
+
+.page-title {
+  font-size: 43px;
+}
+
+.page-sub,
+.gift-desc,
+.entry-meta,
+.muted {
+  color: #6f746e;
+}
+
+.btn-primary,
+.gift-btn {
+  background: #2f6b5a;
+  border: 1px solid #2f6b5a;
+  color: #fffdf5;
+  border-radius: 3px;
+  font-family: var(--font-caps), Georgia, serif;
+  font-size: 13px;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+}
+
+.btn-primary:hover,
+.gift-btn:hover {
+  background: #255747;
+}
+
+.btn-secondary,
+.btn-map,
+.export-btn {
+  border-color: rgba(160, 111, 36, 0.58);
+  border-radius: 3px;
+  color: var(--gold-dark);
+  font-family: var(--font-caps), Georgia, serif;
+  font-size: 12px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.btn-secondary:hover,
+.btn-map:hover,
+.export-btn:hover {
+  background: rgba(160, 111, 36, 0.08);
+  color: #714c17;
+}
+
+.field input,
+.field select,
+.field textarea {
+  border-color: rgba(142, 174, 153, 0.42);
+  border-radius: 3px;
+  background: rgba(255, 255, 252, 0.82);
+  color: var(--text);
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: #2f7f69;
+  box-shadow: 0 0 0 3px rgba(47, 127, 105, 0.12);
+}
+
+.radio-opt {
+  border-color: rgba(142, 174, 153, 0.42);
+  border-radius: 3px;
+}
+
+.radio-opt.active {
+  border-color: #2f7f69;
+  background: rgba(146, 191, 167, 0.16);
+  color: #2f7f69;
+}
+
+.gift-emoji {
+  background: rgba(146, 191, 167, 0.16);
+  font-family: var(--font-caps), Georgia, serif;
+}
+
+.gift-value,
+.stat-num {
+  color: var(--gold-dark);
+}
+
+@media (max-width: 639px) {
+  .app-shell {
+    background:
+      url("/brand/eucalyptus-top-left.png") top left / 270px auto no-repeat,
+      url("/brand/eucalyptus-bottom-right.png") bottom right / 280px auto no-repeat,
+      radial-gradient(circle at 18% 18%, rgba(177, 219, 206, 0.24), transparent 16rem),
+      linear-gradient(180deg, #fbfcf8 0%, #f5f8f2 100%);
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 54px;
+  }
+
+  .hero-kicker {
+    font-size: 14px;
+    letter-spacing: 5px;
+  }
+
+  .hero-welcome {
+    font-size: 16px;
+  }
+}

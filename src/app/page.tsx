@@ -9,16 +9,14 @@ export default function HomePage() {
         <Topbar showAdmin />
 
         <section className="hero">
-          <div className="hero-photo">
-            <div className="hero-photo-label">{couple.names}</div>
-          </div>
-
+          <div className="hero-kicker">Nosso casamento</div>
           <div className="hero-ornament">✦ ✦ ✦</div>
           <h1 className="hero-names">
             {couple.brideFirstName}
-            <span className="hero-amp"> & </span>
+            <span className="hero-amp"> e </span>
             {couple.groomFirstName}
           </h1>
+          <div className="hero-script-note">Save the Date</div>
           <div className="hero-date">
             {couple.weekDay}, {couple.date}
           </div>

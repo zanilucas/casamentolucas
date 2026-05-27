@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Jost } from "next/font/google";
+import { Allura, Cinzel, Cormorant_Garamond, Jost } from "next/font/google";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -13,6 +13,18 @@ const jost = Jost({
   variable: "--font-body",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600"],
+});
+
+const allura = Allura({
+  variable: "--font-script",
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const cinzel = Cinzel({
+  variable: "--font-caps",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -32,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${cormorant.variable} ${jost.variable}`}>
+    <html lang="pt-BR" className={`${cormorant.variable} ${jost.variable} ${allura.variable} ${cinzel.variable}`}>
       <body>{children}</body>
     </html>
   );
