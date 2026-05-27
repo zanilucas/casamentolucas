@@ -929,6 +929,12 @@ body {
   text-transform: uppercase;
 }
 
+.btn-map {
+  background: rgba(255, 255, 252, 0.9);
+  box-shadow: 0 12px 34px rgba(39, 59, 53, 0.1);
+  backdrop-filter: blur(12px);
+}
+
 .btn-secondary:hover,
 .btn-map:hover,
 .export-btn:hover {
