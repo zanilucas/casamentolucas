@@ -723,8 +723,6 @@ body {
   position: relative;
   overflow: hidden;
   background:
-    url("/brand/eucalyptus-top-left.png") top left / min(34vw, 300px) auto no-repeat,
-    url("/brand/eucalyptus-top-right.png") top right / min(34vw, 300px) auto no-repeat,
     url("/brand/floral-bottom.png") bottom center / min(100vw, 1180px) auto no-repeat,
     radial-gradient(circle at 18% 18%, rgba(177, 219, 206, 0.24), transparent 18rem),
     radial-gradient(circle at 85% 72%, rgba(177, 219, 206, 0.18), transparent 18rem),
@@ -1000,7 +998,6 @@ body {
 @media (max-width: 639px) {
   .app-shell {
     background:
-      url("/brand/eucalyptus-top-left.png") top left / 270px auto no-repeat,
       url("/brand/floral-bottom.png") bottom center / 540px auto no-repeat,
       radial-gradient(circle at 18% 18%, rgba(177, 219, 206, 0.24), transparent 16rem),
       linear-gradient(180deg, #fbfcf8 0%, #f5f8f2 100%);
