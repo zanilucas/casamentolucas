@@ -48,9 +48,11 @@ export default async function GiftsPage() {
 
         <section className="gift-grid">
           {gifts.map((gift) => (
-            <article className="gift-card" key={gift.id}>
-              <div className="gift-emoji">{gift.emoji || "♥"}</div>
-              <div>
+            <article className={`gift-card gift-card-${gift.id}`} key={gift.id}>
+              <div className="gift-visual">
+                <span className="gift-emoji">{gift.emoji || "♥"}</span>
+              </div>
+              <div className="gift-content">
                 <h2 className="gift-name">{gift.name}</h2>
                 <p className="gift-desc">{gift.description}</p>
                 <div className="gift-value">

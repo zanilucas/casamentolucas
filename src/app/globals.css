@@ -1063,3 +1063,159 @@ body {
     letter-spacing: 1.5px;
   }
 }
+
+/* Catalogo de presentes */
+.gift-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.gift-card {
+  display: flex;
+  min-width: 0;
+  min-height: 100%;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.gift-visual {
+  position: relative;
+  display: grid;
+  min-height: 138px;
+  place-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 35% 28%, rgba(255, 255, 252, 0.92) 0 16%, transparent 17%),
+    radial-gradient(circle at 72% 70%, rgba(146, 191, 167, 0.22) 0 25%, transparent 26%),
+    linear-gradient(135deg, rgba(240, 247, 241, 0.96), rgba(255, 255, 252, 0.84));
+  border-bottom: 1px solid rgba(142, 174, 153, 0.28);
+}
+
+.gift-visual::before,
+.gift-visual::after {
+  position: absolute;
+  content: "";
+  opacity: 0.42;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.gift-visual::before {
+  right: -30px;
+  bottom: -32px;
+  width: 118px;
+  height: 118px;
+  background-image: url("/brand/floral-bouquet.png");
+}
+
+.gift-visual::after {
+  left: -28px;
+  top: -36px;
+  width: 112px;
+  height: 112px;
+  background-image: url("/brand/hero-floral-left.png");
+}
+
+.gift-emoji {
+  position: relative;
+  z-index: 1;
+  width: 74px;
+  height: 74px;
+  background: rgba(255, 255, 252, 0.72);
+  border: 1px solid rgba(142, 174, 153, 0.34);
+  box-shadow: 0 14px 34px rgba(39, 59, 53, 0.1);
+  font-size: 34px;
+  backdrop-filter: blur(8px);
+}
+
+.gift-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 14px 12px 12px;
+  text-align: center;
+}
+
+.gift-name {
+  display: -webkit-box;
+  min-height: 50px;
+  margin: 0 0 6px;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 19px;
+  line-height: 1.18;
+}
+
+.gift-desc {
+  display: -webkit-box;
+  min-height: 58px;
+  margin: 0 0 10px;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.gift-value {
+  margin-top: auto;
+  font-size: 20px;
+}
+
+.gift-btn {
+  width: calc(100% - 24px);
+  min-height: 44px;
+  margin: 0 12px 12px;
+  padding: 0 10px;
+  font-size: 11px;
+  letter-spacing: 1.7px;
+}
+
+.gift-btn-form {
+  display: grid;
+  gap: 8px;
+  padding: 0 12px 12px;
+}
+
+.gift-btn-form .field {
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.gift-btn-form .field input {
+  min-height: 42px;
+  font-size: 14px;
+}
+
+.gift-btn-form .btn-primary {
+  min-height: 44px;
+  font-size: 10px;
+  letter-spacing: 1.2px;
+}
+
+@media (min-width: 760px) {
+  .gift-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .gift-visual {
+    min-height: 160px;
+  }
+}
+
+@media (max-width: 374px) {
+  .gift-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gift-visual {
+    min-height: 170px;
+  }
+}
