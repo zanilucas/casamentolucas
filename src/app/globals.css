@@ -307,6 +307,11 @@ textarea {
   margin: 0 auto;
 }
 
+.map-actions {
+  display: grid;
+  gap: 10px;
+}
+
 .page-header {
   padding: 30px 24px 22px;
   text-align: center;

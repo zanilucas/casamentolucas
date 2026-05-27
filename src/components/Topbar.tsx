@@ -16,7 +16,7 @@ export function Topbar({ showAdmin, backHref, backLabel = "Inicio", title = coup
           ← {backLabel}
         </Link>
       ) : (
-        <span className="topbar-title">{couple.names} - 2025</span>
+        <span className="topbar-title">{couple.names} - 2026</span>
       )}
 
       {backHref ? <span className="topbar-title">{title}</span> : null}

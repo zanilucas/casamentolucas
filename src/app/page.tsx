@@ -10,7 +10,7 @@ export default function HomePage() {
 
         <section className="hero">
           <div className="hero-photo">
-            <div className="hero-photo-label">Ana & Joao</div>
+            <div className="hero-photo-label">{couple.names}</div>
           </div>
 
           <div className="hero-ornament">✦ ✦ ✦</div>
@@ -49,6 +49,7 @@ export default function HomePage() {
             <div>
               <div className="info-label">Cerimonia</div>
               <div className="info-value">{couple.ceremony}</div>
+              <div className="info-sub">{couple.ceremonyAddress}</div>
             </div>
           </div>
 
@@ -57,13 +58,18 @@ export default function HomePage() {
             <div>
               <div className="info-label">Recepcao</div>
               <div className="info-value">{couple.party}</div>
-              <div className="info-sub">{couple.address}</div>
+              <div className="info-sub">{couple.partyAddress}</div>
             </div>
           </div>
 
-          <a className="btn-map" href={couple.mapsUrl} target="_blank" rel="noreferrer">
-            Abrir localizacao no mapa
-          </a>
+          <div className="map-actions">
+            <a className="btn-map" href={couple.ceremonyMapsUrl} target="_blank" rel="noreferrer">
+              Abrir mapa da cerimonia
+            </a>
+            <a className="btn-map" href={couple.partyMapsUrl} target="_blank" rel="noreferrer">
+              Abrir mapa da recepcao
+            </a>
+          </div>
         </section>
 
         <div className="section-bottom" />

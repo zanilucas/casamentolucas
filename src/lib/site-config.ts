@@ -1,17 +1,19 @@
 export const couple = {
-  names: "Ana & Joao",
-  brideFirstName: "Ana",
-  groomFirstName: "Joao",
-  date: "15 de Marco de 2025",
+  names: "Adrieli & Lucas",
+  brideFirstName: "Adrieli",
+  groomFirstName: "Lucas",
+  date: "21 de novembro de 2026",
   weekDay: "Sabado",
-  time: "17h00",
-  ceremony: "Igreja Nossa Senhora das Gracas",
-  party: "Espaco Villa Garden",
-  address: "Rua das Flores, 123 - Osvaldo Cruz, SP",
-  mapsUrl: "https://maps.google.com/?q=Espaco+Villa+Garden+Osvaldo+Cruz",
-  rsvpDeadline: "28 de fevereiro",
+  time: "10h00",
+  ceremony: "Paroquia Sagrada Familia",
+  ceremonyAddress: "R. Manoel Lopes, 1585 - Centro, Lucelia - SP",
+  party: "Recanto Uniao",
+  partyAddress: "Bairro Uniao - Lucelia - SP",
+  ceremonyMapsUrl: "https://maps.app.goo.gl/UGHZVb4AkggGjSRe8",
+  partyMapsUrl: "https://maps.app.goo.gl/paaR7vce81LvbKXeA",
+  rsvpDeadline: "20 de outubro de 2026",
   welcome:
-    "Com imensa alegria, convidamos voce para celebrar conosco o inicio da nossa nova historia. Sera uma noite de amor, gratidao e muitas memorias inesqueciveis.",
+    "Com o coracao cheio de alegria, convidamos voce para celebrar conosco o inicio da nossa vida a dois. Sera uma manha especial, preparada com amor, fe e gratidao, e a sua presenca tornara esse momento ainda mais inesquecivel.",
 };
 
 export const fallbackGifts = [

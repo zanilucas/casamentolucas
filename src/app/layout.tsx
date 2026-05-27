@@ -16,8 +16,8 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
-  title: "Ana & Joao | Casamento",
-  description: "Confirme sua presenca e escolha um presente para Ana & Joao.",
+  title: "Adrieli & Lucas | Casamento",
+  description: "Confirme sua presenca e escolha um presente para Adrieli & Lucas.",
 };
 
 export const viewport: Viewport = {
