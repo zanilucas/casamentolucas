@@ -188,7 +188,17 @@ textarea {
 .pay-wrap,
 .admin-wrap,
 .gift-grid {
+  position: relative;
   padding: 16px;
+}
+
+.info-stack::before {
+  position: absolute;
+  inset: -18px 8px -24px;
+  z-index: -1;
+  content: "";
+  background: radial-gradient(ellipse at center, rgba(255, 255, 252, 0.72) 0%, rgba(255, 255, 252, 0.48) 38%, transparent 72%);
+  pointer-events: none;
 }
 
 .info-card,
@@ -715,8 +725,7 @@ body {
   background:
     url("/brand/eucalyptus-top-left.png") top left / min(34vw, 300px) auto no-repeat,
     url("/brand/eucalyptus-top-right.png") top right / min(34vw, 300px) auto no-repeat,
-    url("/brand/eucalyptus-bottom-left.png") bottom left / min(52vw, 390px) auto no-repeat,
-    url("/brand/eucalyptus-bottom-right.png") bottom right / min(48vw, 370px) auto no-repeat,
+    url("/brand/floral-bottom.png") bottom center / min(100vw, 1180px) auto no-repeat,
     radial-gradient(circle at 18% 18%, rgba(177, 219, 206, 0.24), transparent 18rem),
     radial-gradient(circle at 85% 72%, rgba(177, 219, 206, 0.18), transparent 18rem),
     linear-gradient(180deg, #fbfcf8 0%, #f5f8f2 100%);
@@ -992,7 +1001,7 @@ body {
   .app-shell {
     background:
       url("/brand/eucalyptus-top-left.png") top left / 270px auto no-repeat,
-      url("/brand/eucalyptus-bottom-right.png") bottom right / 280px auto no-repeat,
+      url("/brand/floral-bottom.png") bottom center / 540px auto no-repeat,
       radial-gradient(circle at 18% 18%, rgba(177, 219, 206, 0.24), transparent 16rem),
       linear-gradient(180deg, #fbfcf8 0%, #f5f8f2 100%);
   }
