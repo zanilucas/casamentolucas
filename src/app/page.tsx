@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Topbar } from "@/components/Topbar";
 import { couple } from "@/lib/site-config";
@@ -35,7 +36,7 @@ export default function HomePage() {
 
         <section className="info-stack" aria-label="Informacoes do casamento">
           <div className="info-card">
-            <div className="info-icon">○</div>
+            <Image className="info-icon-img" src="/brand/info-time.jpg" alt="" width={58} height={58} />
             <div>
               <div className="info-label">Horario</div>
               <div className="info-value">{couple.time}</div>
@@ -43,7 +44,7 @@ export default function HomePage() {
           </div>
 
           <div className="info-card">
-            <div className="info-icon">✧</div>
+            <Image className="info-icon-img" src="/brand/info-ceremony.jpg" alt="" width={58} height={58} />
             <div>
               <div className="info-label">Cerimonia</div>
               <div className="info-value">{couple.ceremony}</div>
@@ -52,7 +53,7 @@ export default function HomePage() {
           </div>
 
           <div className="info-card">
-            <div className="info-icon">◇</div>
+            <Image className="info-icon-img" src="/brand/info-reception.jpg" alt="" width={58} height={58} />
             <div>
               <div className="info-label">Recepcao</div>
               <div className="info-value">{couple.party}</div>

@@ -231,6 +231,18 @@ textarea {
   text-align: center;
 }
 
+.info-icon-img {
+  width: 58px;
+  height: 58px;
+  flex: 0 0 58px;
+  border-radius: 999px;
+  border: 1px solid rgba(142, 174, 153, 0.24);
+  background: rgba(255, 255, 252, 0.9);
+  box-shadow: 0 10px 26px rgba(39, 59, 53, 0.08);
+  object-fit: cover;
+  object-position: center;
+}
+
 .info-label,
 .field label {
   display: block;
