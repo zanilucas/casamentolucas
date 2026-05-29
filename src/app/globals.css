@@ -869,6 +869,30 @@ body {
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.32);
 }
 
+.hero .btn-primary {
+  background: #fffdf5;
+  border-color: #fffdf5;
+  color: #2f6b5a;
+}
+
+.hero .btn-primary:hover {
+  background: #f4f8f0;
+  border-color: #f4f8f0;
+  color: #255747;
+}
+
+.hero .btn-secondary {
+  background: #fffdf5;
+  border-color: #fffdf5;
+  color: var(--gold-dark);
+}
+
+.hero .btn-secondary:hover {
+  background: #fdf7ea;
+  border-color: #fdf7ea;
+  color: #714c17;
+}
+
 .info-card,
 .gift-card,
 .pay-gift-info,
