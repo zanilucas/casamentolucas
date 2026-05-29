@@ -1053,11 +1053,15 @@ body {
     padding-top: 54px;
   }
 
+  .hero > * {
+    position: relative;
+    z-index: 1;
+  }
+
   .hero::before,
   .hero::after {
     position: absolute;
-    top: 112px;
-    z-index: -1;
+    z-index: 0;
     width: 46vw;
     max-width: 220px;
     height: 430px;
@@ -1069,15 +1073,19 @@ body {
   }
 
   .hero::before {
+    top: 112px;
     left: -22vw;
     background-image: url("/brand/hero-floral-left.png");
     background-position: top left;
   }
 
   .hero::after {
-    right: -22vw;
+    top: auto;
+    right: -20vw;
+    bottom: -76px;
+    z-index: 2;
     background-image: url("/brand/hero-floral-right.png");
-    background-position: top right;
+    background-position: bottom right;
   }
 
   .hero-kicker {
