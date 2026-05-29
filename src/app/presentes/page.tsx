@@ -7,6 +7,23 @@ import GiftPaymentForm from "./payment-form";
 
 export const dynamic = "force-dynamic";
 
+const giftImageById: Record<string, string> = {
+  "contribuicao-livre": "/brand/gifts/contribuicao-livre.jpg",
+  "lua-de-mel": "/brand/gifts/lua-de-mel.jpg",
+  geladeira: "/brand/gifts/geladeira.jpg",
+  "filtro-de-agua": "/brand/gifts/filtro-de-agua.jpg",
+  "aspirador-de-po": "/brand/gifts/aspirador-de-po.jpg",
+  "jogo-de-cama": "/brand/gifts/jogo-de-cama.jpg",
+  "jogo-de-toalhas": "/brand/gifts/jogo-de-toalhas.jpg",
+  batedeira: "/brand/gifts/batedeira.jpg",
+  "panela-eletrica": "/brand/gifts/panela-eletrica.jpg",
+  grill: "/brand/gifts/grill.jpg",
+  "chaleira-eletrica": "/brand/gifts/chaleira-eletrica.jpg",
+  "casinha-pra-mel": "/brand/gifts/casinha-pra-mel.jpg",
+  "ferro-de-passar": "/brand/gifts/ferro-de-passar.jpg",
+  "aparelho-de-jantar": "/brand/gifts/aparelho-de-jantar.jpg",
+};
+
 async function getGifts(): Promise<Gift[]> {
   try {
     const supabase = getSupabaseAdmin();
@@ -51,8 +68,13 @@ export default async function GiftsPage() {
         <section className="gift-grid">
           {gifts.map((gift) => (
             <article className={`gift-card gift-card-${gift.id}`} key={gift.id}>
-              <div className="gift-visual">
-                <span className="gift-emoji">{gift.emoji || "♥"}</span>
+              <div
+                className="gift-visual"
+                style={{
+                  backgroundImage: `linear-gradient(180deg, rgba(255, 255, 252, 0.04), rgba(39, 91, 76, 0.2)), url("${giftImageById[gift.id] || "/brand/gift-header.jpg"}")`,
+                }}
+              >
+                <span className="gift-emoji">{gift.emoji || "+"}</span>
               </div>
               <div className="gift-content">
                 <h2 className="gift-name">{gift.name}</h2>
