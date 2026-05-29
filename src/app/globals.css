@@ -1103,6 +1103,46 @@ body {
     0 10px 28px rgba(255, 255, 252, 0.9);
 }
 
+.rsvp-intro {
+  position: relative;
+  max-width: 980px;
+  min-height: 260px;
+  margin: 0 auto 24px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(142, 174, 153, 0.22);
+  background:
+    linear-gradient(90deg, rgba(255, 255, 252, 0.94) 0 22%, rgba(255, 255, 252, 0.66) 48%, rgba(255, 255, 252, 0.88) 100%),
+    url("/brand/church-watercolor.png") center 58% / cover no-repeat;
+  box-shadow: 0 18px 46px rgba(39, 59, 53, 0.08);
+}
+
+.rsvp-intro::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    radial-gradient(circle at center, rgba(255, 255, 252, 0.56), rgba(255, 255, 252, 0.18) 58%, rgba(255, 255, 252, 0.5)),
+    linear-gradient(180deg, rgba(255, 255, 252, 0.26), rgba(255, 255, 252, 0.7));
+  pointer-events: none;
+}
+
+.rsvp-intro .page-header {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  min-height: 260px;
+  align-content: center;
+  padding: 48px 26px;
+  background: transparent;
+}
+
+.rsvp-intro .page-title,
+.rsvp-intro .page-sub {
+  text-shadow:
+    0 1px 0 rgba(255, 255, 252, 0.98),
+    0 10px 28px rgba(255, 255, 252, 0.92);
+}
+
 .gift-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
@@ -1248,6 +1288,17 @@ body {
 }
 
 @media (min-width: 760px) {
+  .rsvp-intro {
+    min-height: 320px;
+    margin-bottom: 34px;
+    border: 1px solid rgba(142, 174, 153, 0.22);
+    background-position: center 62%;
+  }
+
+  .rsvp-intro .page-header {
+    min-height: 320px;
+  }
+
   .gifts-intro {
     min-height: 320px;
     margin-bottom: 34px;
@@ -1269,6 +1320,17 @@ body {
 }
 
 @media (max-width: 374px) {
+  .rsvp-intro {
+    min-height: 238px;
+    background-position: center 64%;
+  }
+
+  .rsvp-intro .page-header {
+    min-height: 238px;
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
   .gifts-intro {
     min-height: 238px;
   }

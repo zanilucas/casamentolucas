@@ -82,7 +82,9 @@ export default function RsvpPage() {
     <main className="app-shell">
       <div className="container-mobile">
         <Topbar backHref="/" />
-        <PageHeader title="Confirme sua Presenca" subtitle={`Responda ate ${couple.rsvpDeadline}.`} />
+        <div className="rsvp-intro">
+          <PageHeader title="Confirme sua Presenca" subtitle={`Responda ate ${couple.rsvpDeadline}.`} />
+        </div>
 
         <section className="form-wrap">
           {status === "error" ? <p className="notice error">{message}</p> : null}
