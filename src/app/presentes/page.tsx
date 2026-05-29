@@ -22,6 +22,19 @@ const giftImageById: Record<string, string> = {
   "casinha-pra-mel": "/brand/gifts/casinha-pra-mel.jpg",
   "ferro-de-passar": "/brand/gifts/ferro-de-passar.jpg",
   "aparelho-de-jantar": "/brand/gifts/aparelho-de-jantar.jpg",
+  "kit-churrasco": "/brand/gifts/kit-churrasco.jpg",
+  "conjunto-de-facas": "/brand/gifts/conjunto-de-facas.jpg",
+  "jogo-de-assadeiras": "/brand/gifts/jogo-de-assadeiras.jpg",
+  "jogo-de-panelas": "/brand/gifts/jogo-de-panelas.jpg",
+  "mixer-com-processador": "/brand/gifts/mixer-com-processador.jpg",
+  "ventilador-de-teto": "/brand/gifts/ventilador-de-teto.jpg",
+  aparador: "/brand/gifts/aparador.jpg",
+  "garrafa-termica": "/brand/gifts/garrafa-termica.jpg",
+  "toalha-de-mesa": "/brand/gifts/toalha-de-mesa.jpg",
+  petisqueira: "/brand/gifts/petisqueira.jpg",
+  suqueira: "/brand/gifts/suqueira.jpg",
+  "jogo-de-tacas": "/brand/gifts/jogo-de-tacas.jpg",
+  "kit-de-frigideiras": "/brand/gifts/kit-de-frigideiras.jpg",
 };
 
 async function getGifts(): Promise<Gift[]> {

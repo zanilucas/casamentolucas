@@ -78,7 +78,20 @@ values
   ('chaleira-eletrica', 'Chaleira Eletrica', 'Para cafe, cha e momentos tranquilos em casa.', 16000, 'CE', false, true, 11),
   ('casinha-pra-mel', 'Casinha pra Mel', 'Um cantinho especial e confortavel para a Mel.', 30000, 'CM', false, true, 12),
   ('ferro-de-passar', 'Ferro de Passar', 'Um item simples e muito util para o dia a dia.', 18000, 'FP', false, true, 13),
-  ('aparelho-de-jantar', 'Aparelho de Jantar', 'Para receber com carinho e montar nossa mesa.', 40000, 'AJ', false, true, 14)
+  ('aparelho-de-jantar', 'Aparelho de Jantar', 'Para receber com carinho e montar nossa mesa.', 40000, 'AJ', false, true, 14),
+  ('kit-churrasco', 'Kit Churrasco', 'Para preparar momentos especiais com familia e amigos.', 15000, 'KC', false, true, 15),
+  ('conjunto-de-facas', 'Conjunto de Facas', 'Um conjunto pratico para o dia a dia da nossa cozinha.', 25000, 'CF', false, true, 16),
+  ('jogo-de-assadeiras', 'Jogo de Assadeiras', 'Para receitas de forno, almocos e sobremesas especiais.', 18000, 'JA', false, true, 17),
+  ('jogo-de-panelas', 'Jogo de Panelas', 'Um presente essencial para completar nossa cozinha.', 60000, 'JP', false, true, 18),
+  ('mixer-com-processador', 'Mixer com Processador', 'Mais praticidade para preparar receitas no dia a dia.', 30000, 'MP', false, true, 19),
+  ('ventilador-de-teto', 'Ventilador de Teto', 'Para deixar nosso lar mais confortavel e fresquinho.', 35000, 'VT', false, true, 20),
+  ('aparador', 'Aparador', 'Um movel lindo e util para decorar nosso novo lar.', 70000, 'AR', false, true, 21),
+  ('garrafa-termica', 'Garrafa Termica', 'Para cafe quentinho e momentos gostosos em casa.', 12000, 'GT', false, true, 22),
+  ('toalha-de-mesa', 'Toalha de Mesa', 'Para montar uma mesa bonita nas nossas refeicoes.', 15000, 'TM', false, true, 23),
+  ('petisqueira', 'Petisqueira', 'Para servir petiscos e receber pessoas queridas.', 12000, 'PT', false, true, 24),
+  ('suqueira', 'Suqueira', 'Para servir sucos e bebidas com charme.', 18000, 'SQ', false, true, 25),
+  ('jogo-de-tacas', 'Jogo de Tacas', 'Para brindar momentos especiais da nossa nova vida.', 22000, 'JT', false, true, 26),
+  ('kit-de-frigideiras', 'Kit de Frigideiras', 'Para preparar refeicoes praticas e deliciosas.', 30000, 'KF', false, true, 27)
 on conflict (id) do update set
   name = excluded.name,
   description = excluded.description,
