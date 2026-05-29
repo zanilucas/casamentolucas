@@ -26,7 +26,7 @@ export default function HomePage() {
 
           <div className="button-stack">
             <Link className="btn-primary" href="/rsvp">
-              Confirmar Presenca
+              Confirmar Presença
             </Link>
             <Link className="btn-secondary" href="/presentes">
               Lista de Presentes
@@ -34,11 +34,11 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="info-stack" aria-label="Informacoes do casamento">
+        <section className="info-stack" aria-label="Informações do casamento">
           <div className="info-card">
             <Image className="info-icon-img" src="/brand/info-time.jpg" alt="" width={58} height={58} />
             <div>
-              <div className="info-label">Horario</div>
+              <div className="info-label">Horário</div>
               <div className="info-value">{couple.time}</div>
             </div>
           </div>
@@ -46,7 +46,7 @@ export default function HomePage() {
           <div className="info-card">
             <Image className="info-icon-img" src="/brand/info-ceremony.jpg" alt="" width={58} height={58} />
             <div>
-              <div className="info-label">Cerimonia</div>
+              <div className="info-label">Cerimônia</div>
               <div className="info-value">{couple.ceremony}</div>
               <div className="info-sub">{couple.ceremonyAddress}</div>
             </div>
@@ -55,7 +55,7 @@ export default function HomePage() {
           <div className="info-card">
             <Image className="info-icon-img" src="/brand/info-reception.jpg" alt="" width={58} height={58} />
             <div>
-              <div className="info-label">Recepcao</div>
+              <div className="info-label">Recepção</div>
               <div className="info-value">{couple.party}</div>
               <div className="info-sub">{couple.partyAddress}</div>
             </div>
@@ -63,10 +63,10 @@ export default function HomePage() {
 
           <div className="map-actions">
             <a className="btn-map" href={couple.ceremonyMapsUrl} target="_blank" rel="noreferrer">
-              Abrir mapa da cerimonia
+              Abrir mapa da cerimônia
             </a>
             <a className="btn-map" href={couple.partyMapsUrl} target="_blank" rel="noreferrer">
-              Abrir mapa da recepcao
+              Abrir mapa da recepção
             </a>
           </div>
         </section>

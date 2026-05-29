@@ -79,7 +79,7 @@ export default function AdminPage() {
     const data = await response.json();
 
     if (!response.ok) {
-      setError(data.error || "Nao foi possivel entrar.");
+      setError(data.error || "Não foi possível entrar.");
       return;
     }
 
@@ -110,10 +110,10 @@ export default function AdminPage() {
     return (
       <main className="app-shell">
         <div className="container-mobile">
-          <Topbar backHref="/" title="Area Admin" />
+          <Topbar backHref="/" title="Área Admin" />
           <section className="admin-login">
             <h1 className="admin-title">Painel dos Noivos</h1>
-            <p className="admin-sub">Area protegida por senha</p>
+            <p className="admin-sub">Área protegida por senha</p>
 
             <form onSubmit={handleLogin}>
               <div className="field">
@@ -169,14 +169,14 @@ export default function AdminPage() {
             Exportar RSVP em CSV
           </a>
 
-          <h2 className="section-title">Confirmacoes de Presenca</h2>
-          {summary.rsvps.length === 0 ? <p className="muted">Nenhuma confirmacao ainda.</p> : null}
+          <h2 className="section-title">Confirmações de Presença</h2>
+          {summary.rsvps.length === 0 ? <p className="muted">Nenhuma confirmação ainda.</p> : null}
           {summary.rsvps.map((rsvp) => (
             <article className="entry-card" key={rsvp.id}>
               <div className="entry-head">
                 <div className="entry-name">{rsvp.full_name}</div>
                 <span className={`badge ${rsvp.attending ? "badge-yes" : "badge-no"}`}>
-                  {rsvp.attending ? "Confirmado" : "Nao vai"}
+                  {rsvp.attending ? "Confirmado" : "Não vai"}
                 </span>
               </div>
               <div className="entry-meta">

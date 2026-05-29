@@ -11,10 +11,10 @@ export default function PaymentSuccessPage() {
           <h1 className="success-title">Muito obrigados!</h1>
           <div className="success-divider" />
           <p className="success-msg">
-            Seu pagamento foi iniciado com sucesso. Assim que o Mercado Pago confirmar, o presente aparecera no painel.
+            Seu pagamento foi iniciado com sucesso. Assim que o Mercado Pago confirmar, o presente aparecerá no painel.
           </p>
           <Link className="btn-primary" href="/">
-            Voltar ao inicio
+            Voltar ao início
           </Link>
         </section>
       </div>

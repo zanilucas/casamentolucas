@@ -47,12 +47,12 @@ export async function POST(request: Request) {
 
     const gift = await findGift(body.giftId);
     if (!gift) {
-      return NextResponse.json({ error: "Presente nao encontrado." }, { status: 404 });
+      return NextResponse.json({ error: "Presente não encontrado." }, { status: 404 });
     }
 
     const amountCents = gift.allow_custom_amount ? Number(body.customAmountCents || 0) : Number(gift.price_cents || 0);
     if (amountCents < 1000) {
-      return NextResponse.json({ error: "O valor minimo e R$ 10,00." }, { status: 400 });
+      return NextResponse.json({ error: "O valor mínimo é R$ 10,00." }, { status: 400 });
     }
 
     const supabase = getSupabaseAdmin();

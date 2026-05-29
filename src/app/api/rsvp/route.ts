@@ -11,7 +11,7 @@ export async function POST(request: Request) {
     }
 
     if (body.attending !== "sim" && body.attending !== "nao") {
-      return NextResponse.json({ error: "Informe se voce comparecera." }, { status: 400 });
+      return NextResponse.json({ error: "Informe se você comparecerá." }, { status: 400 });
     }
 
     const companionsCount = Number(body.companionsCount || 0);

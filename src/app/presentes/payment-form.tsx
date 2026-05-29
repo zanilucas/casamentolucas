@@ -29,7 +29,7 @@ export default function GiftPaymentForm({ gift }: { gift: Gift }) {
 
     if (!response.ok) {
       setLoading(false);
-      setError(data.error || "Nao foi possivel iniciar o pagamento.");
+      setError(data.error || "Não foi possível iniciar o pagamento.");
       return;
     }
 
@@ -68,7 +68,7 @@ export default function GiftPaymentForm({ gift }: { gift: Gift }) {
       {error ? <p className="notice error">{error}</p> : null}
 
       <button className="btn-primary" type="submit" disabled={loading}>
-        {loading ? "Abrindo Mercado Pago..." : "Pagar com Pix ou cartao"}
+        {loading ? "Abrindo Mercado Pago..." : "Pagar com Pix ou cartão"}
       </button>
     </form>
   );

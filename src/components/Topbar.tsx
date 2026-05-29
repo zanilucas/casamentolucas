@@ -8,7 +8,7 @@ type TopbarProps = {
   title?: string;
 };
 
-export function Topbar({ showAdmin, backHref, backLabel = "Inicio", title = couple.names }: TopbarProps) {
+export function Topbar({ showAdmin, backHref, backLabel = "Início", title = couple.names }: TopbarProps) {
   return (
     <header className="topbar">
       {backHref ? (

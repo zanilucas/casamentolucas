@@ -74,7 +74,7 @@ export default async function GiftsPage() {
         <div className="gifts-intro">
           <PageHeader
             title="Lista de Presentes"
-            subtitle="Seu presente e uma forma de celebrar conosco esse momento tao especial."
+            subtitle="Seu presente é uma forma de celebrar conosco esse momento tão especial."
           />
         </div>
 

@@ -29,7 +29,7 @@ const cinzel = Cinzel({
 
 export const metadata: Metadata = {
   title: "Adrieli & Lucas | Casamento",
-  description: "Confirme sua presenca e escolha um presente para Adrieli & Lucas.",
+  description: "Confirme sua presença e escolha um presente para Adrieli & Lucas.",
 };
 
 export const viewport: Viewport = {

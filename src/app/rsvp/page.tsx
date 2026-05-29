@@ -40,14 +40,14 @@ export default function RsvpPage() {
 
     if (!response.ok) {
       setStatus("error");
-      setMessage(data.error || "Nao foi possivel salvar sua resposta. Tente novamente.");
+      setMessage(data.error || "Não foi possível salvar sua resposta. Tente novamente.");
       return;
     }
 
     setStatus("success");
     setMessage(
       attending === "sim"
-        ? `Que alegria, ${fullName.split(" ")[0]}! Sua presenca foi confirmada.`
+        ? `Que alegria, ${fullName.split(" ")[0]}! Sua presença foi confirmada.`
         : `Obrigado por avisar, ${fullName.split(" ")[0]}. Sentiremos sua falta.`
     );
   }
@@ -64,7 +64,7 @@ export default function RsvpPage() {
             <p className="success-msg">{message}</p>
             <div className="button-stack">
               <Link className="btn-primary" href="/">
-                Voltar ao inicio
+                Voltar ao início
               </Link>
               {attending === "sim" ? (
                 <Link className="btn-secondary" href="/presentes">
@@ -83,7 +83,7 @@ export default function RsvpPage() {
       <div className="container-mobile">
         <Topbar backHref="/" />
         <div className="rsvp-intro">
-          <PageHeader title="Confirme sua Presenca" subtitle={`Responda ate ${couple.rsvpDeadline}.`} />
+          <PageHeader title="Confirme sua Presença" subtitle={`Responda até ${couple.rsvpDeadline}.`} />
         </div>
 
         <section className="form-wrap">
@@ -107,21 +107,21 @@ export default function RsvpPage() {
             </div>
 
             <div className="field">
-              <label>Voce comparecera? *</label>
+              <label>Você comparecerá? *</label>
               <div className="radio-group">
                 <button
                   type="button"
                   className={`radio-opt ${attending === "sim" ? "active" : ""}`}
                   onClick={() => setAttending("sim")}
                 >
-                  Sim, estarei la
+                  Sim, estarei lá
                 </button>
                 <button
                   type="button"
                   className={`radio-opt ${attending === "nao" ? "active" : ""}`}
                   onClick={() => setAttending("nao")}
                 >
-                  Nao poderei ir
+                  Não poderei ir
                 </button>
               </div>
             </div>
@@ -158,17 +158,17 @@ export default function RsvpPage() {
             ) : null}
 
             <div className="field">
-              <label htmlFor="notes">Observacoes</label>
+              <label htmlFor="notes">Observações</label>
               <textarea
                 id="notes"
                 value={notes}
                 onChange={(e) => setNotes(e.target.value)}
-                placeholder="Restricoes alimentares, recados ou informacoes importantes."
+                placeholder="Restrições alimentares, recados ou informações importantes."
               />
             </div>
 
             <button className="btn-primary" disabled={status === "saving" || !attending} type="submit">
-              {status === "saving" ? "Salvando..." : "Confirmar Presenca"}
+              {status === "saving" ? "Salvando..." : "Confirmar Presença"}
             </button>
           </form>
         </section>

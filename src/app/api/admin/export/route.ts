@@ -8,7 +8,7 @@ function csvCell(value: unknown) {
 
 export async function GET() {
   if (!(await isAdminAuthenticated())) {
-    return NextResponse.json({ error: "Nao autorizado." }, { status: 401 });
+    return NextResponse.json({ error: "Não autorizado." }, { status: 401 });
   }
 
   const supabase = getSupabaseAdmin();
@@ -17,11 +17,11 @@ export async function GET() {
   if (error) throw error;
 
   const rows = [
-    ["Nome", "WhatsApp", "Comparecera", "Acompanhantes", "Nomes acompanhantes", "Observacoes", "Data"],
+    ["Nome", "WhatsApp", "Comparecerá", "Acompanhantes", "Nomes acompanhantes", "Observações", "Data"],
     ...(data || []).map((rsvp) => [
       rsvp.full_name,
       rsvp.whatsapp,
-      rsvp.attending ? "sim" : "nao",
+      rsvp.attending ? "sim" : "não",
       rsvp.companions_count,
       rsvp.companions_names,
       rsvp.notes,
