@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { PageHeader } from "@/components/PageHeader";
 import { Topbar } from "@/components/Topbar";
 import { fallbackGifts, formatMoney } from "@/lib/site-config";
@@ -70,13 +69,12 @@ export default async function GiftsPage() {
           {gifts.map((gift) => (
             <article className={`gift-card gift-card-${gift.id}`} key={gift.id}>
               <div className="gift-visual">
-                <Image
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
                   className="gift-photo"
                   src={giftImageById[gift.id] || "/brand/gift-header.jpg"}
                   alt=""
-                  fill
-                  loading="lazy"
-                  sizes="(max-width: 374px) 100vw, (max-width: 759px) 50vw, 33vw"
+                  loading="eager"
                 />
                 <span className="gift-emoji">{gift.emoji || "+"}</span>
               </div>
