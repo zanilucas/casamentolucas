@@ -61,18 +61,29 @@ create index if not exists rsvps_attending_idx on public.rsvps(attending);
 create index if not exists payments_status_idx on public.payments(status);
 create index if not exists payments_external_reference_idx on public.payments(external_reference);
 
-insert into public.gifts (id, name, description, price_cents, emoji, allow_custom_amount, sort_order)
+update public.gifts set active = false;
+
+insert into public.gifts (id, name, description, price_cents, emoji, allow_custom_amount, active, sort_order)
 values
-  ('lua-de-mel', 'Cota Lua de Mel', 'Contribua para a viagem dos nossos sonhos.', 20000, '✈', false, 1),
-  ('jantar-romantico', 'Jantar Romantico', 'Um jantar especial para dois no destino da lua de mel.', 15000, '♡', false, 2),
-  ('moveis', 'Ajuda para Moveis', 'Ajude a mobiliar e decorar nosso primeiro lar.', 35000, '⌂', false, 3),
-  ('passeio', 'Passeio na Viagem', 'Patrocine uma experiencia especial na nossa viagem.', 25000, '✦', false, 4),
-  ('enxoval', 'Enxoval & Cama', 'Contribua para o enxoval elegante do nosso novo lar.', 18000, '❀', false, 5),
-  ('contribuicao-livre', 'Contribuicao Livre', 'Qualquer valor e muito bem-vindo e apreciado de coracao.', null, '♥', true, 6)
+  ('contribuicao-livre', 'Contribuicao Livre', 'Escolha o valor que desejar para nos ajudar nesse novo comeco.', null, '+', true, true, 1),
+  ('lua-de-mel', 'Cota Lua de Mel', 'Contribua para a viagem dos nossos sonhos.', 20000, 'LM', false, true, 2),
+  ('geladeira', 'Geladeira', 'Ajude a completar nossa cozinha com esse item essencial.', 250000, 'GE', false, true, 3),
+  ('filtro-de-agua', 'Filtro de Agua', 'Para deixar nossa rotina mais pratica e saudavel.', 25000, 'FA', false, true, 4),
+  ('aspirador-de-po', 'Aspirador de Po', 'Uma ajuda bem-vinda para manter nosso lar sempre em ordem.', 35000, 'AP', false, true, 5),
+  ('jogo-de-cama', 'Jogo de Cama', 'Para deixar nosso quarto mais aconchegante.', 22000, 'JC', false, true, 6),
+  ('jogo-de-toalhas', 'Jogo de Toalhas de Banho', 'Um carinho para o enxoval do nosso novo lar.', 18000, 'JT', false, true, 7),
+  ('batedeira', 'Batedeira', 'Para preparar receitas especiais na nossa cozinha.', 28000, 'BT', false, true, 8),
+  ('panela-eletrica', 'Panela Eletrica', 'Mais praticidade para os almocos e jantares a dois.', 30000, 'PE', false, true, 9),
+  ('grill', 'Grill', 'Para refeicoes rapidas, praticas e gostosas.', 22000, 'GR', false, true, 10),
+  ('chaleira-eletrica', 'Chaleira Eletrica', 'Para cafe, cha e momentos tranquilos em casa.', 16000, 'CE', false, true, 11),
+  ('casinha-pra-mel', 'Casinha pra Mel', 'Um cantinho especial e confortavel para a Mel.', 30000, 'CM', false, true, 12),
+  ('ferro-de-passar', 'Ferro de Passar', 'Um item simples e muito util para o dia a dia.', 18000, 'FP', false, true, 13),
+  ('aparelho-de-jantar', 'Aparelho de Jantar', 'Para receber com carinho e montar nossa mesa.', 40000, 'AJ', false, true, 14)
 on conflict (id) do update set
   name = excluded.name,
   description = excluded.description,
   price_cents = excluded.price_cents,
   emoji = excluded.emoji,
   allow_custom_amount = excluded.allow_custom_amount,
+  active = excluded.active,
   sort_order = excluded.sort_order;
