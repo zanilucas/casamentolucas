@@ -94,6 +94,11 @@ export async function POST(request: Request) {
           failure: `${appUrl}/presentes/falha`,
           pending: `${appUrl}/presentes/pendente`,
         },
+        payment_methods: {
+          excluded_payment_methods: [],
+          excluded_payment_types: [],
+          installments: 12,
+        },
         ...(shouldAutoReturn ? { auto_return: "approved" as const } : {}),
         notification_url: `${appUrl}/api/payments/webhook`,
       },

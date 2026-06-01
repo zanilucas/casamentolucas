@@ -13,7 +13,7 @@ export const couple = {
   partyMapsUrl: "https://maps.app.goo.gl/paaR7vce81LvbKXeA",
   rsvpDeadline: "20 de outubro de 2026",
   welcome:
-    "Sejam bem-vindos ao nosso cantinho! Com o coração cheio de alegria, criamos este espaço para compartilhar com vocês cada detalhe de um dos dias mais especiais das nossas vidas. Será uma manhã preparada com muito amor, fé e gratidão, e ter vocês ao nosso lado tornará esse momento ainda mais inesquecível. Obrigada por fazerem parte da nossa história ? estamos contando os dias para celebrar esse sonho com vocês!",
+    "Sejam bem-vindos ao nosso cantinho! Com o coração cheio de alegria, criamos este espaço para compartilhar com vocês cada detalhe de um dos dias mais especiais das nossas vidas. Será uma manhã preparada com muito amor, fé e gratidão, e ter vocês ao nosso lado tornará esse momento ainda mais inesquecível. Obrigada por fazerem parte da nossa história — estamos contando os dias para celebrar esse sonho com vocês!",
 };
 
 export const fallbackGifts = [
