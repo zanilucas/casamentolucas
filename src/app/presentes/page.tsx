@@ -1,41 +1,11 @@
 import { PageHeader } from "@/components/PageHeader";
 import { Topbar } from "@/components/Topbar";
-import { fallbackGifts, formatMoney } from "@/lib/site-config";
+import { fallbackGifts, formatMoney, giftImageById } from "@/lib/site-config";
 import { getSupabaseAdmin } from "@/lib/supabase-admin";
 import type { Gift } from "@/lib/types";
 import GiftPaymentForm from "./payment-form";
 
 export const dynamic = "force-dynamic";
-
-const giftImageById: Record<string, string> = {
-  "contribuicao-livre": "/brand/gifts/contribuicao-livre.jpg",
-  "lua-de-mel": "/brand/gifts/lua-de-mel.jpg",
-  geladeira: "/brand/gifts/geladeira.jpg",
-  "filtro-de-agua": "/brand/gifts/filtro-de-agua.jpg",
-  "aspirador-de-po": "/brand/gifts/aspirador-de-po.jpg",
-  "jogo-de-cama": "/brand/gifts/jogo-de-cama.jpg",
-  "jogo-de-toalhas": "/brand/gifts/jogo-de-toalhas.jpg",
-  batedeira: "/brand/gifts/batedeira.jpg",
-  "panela-eletrica": "/brand/gifts/panela-eletrica.jpg",
-  grill: "/brand/gifts/grill.jpg",
-  "chaleira-eletrica": "/brand/gifts/chaleira-eletrica.jpg",
-  "casinha-pra-mel": "/brand/gifts/casinha-pra-mel.jpg",
-  "ferro-de-passar": "/brand/gifts/ferro-de-passar.jpg",
-  "aparelho-de-jantar": "/brand/gifts/aparelho-de-jantar.jpg",
-  "kit-churrasco": "/brand/gifts/kit-churrasco.jpg",
-  "conjunto-de-facas": "/brand/gifts/conjunto-de-facas.jpg",
-  "jogo-de-assadeiras": "/brand/gifts/jogo-de-assadeiras.jpg",
-  "jogo-de-panelas": "/brand/gifts/jogo-de-panelas.jpg",
-  "mixer-com-processador": "/brand/gifts/mixer-com-processador.jpg",
-  "ventilador-de-teto": "/brand/gifts/ventilador-de-teto.jpg",
-  aparador: "/brand/gifts/aparador.jpg",
-  "garrafa-termica": "/brand/gifts/garrafa-termica.jpg",
-  "toalha-de-mesa": "/brand/gifts/toalha-de-mesa.jpg",
-  petisqueira: "/brand/gifts/petisqueira.jpg",
-  suqueira: "/brand/gifts/suqueira.jpg",
-  "jogo-de-tacas": "/brand/gifts/jogo-de-tacas.jpg",
-  "kit-de-frigideiras": "/brand/gifts/kit-de-frigideiras.jpg",
-};
 
 async function getGifts(): Promise<Gift[]> {
   try {
