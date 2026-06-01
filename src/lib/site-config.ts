@@ -50,6 +50,14 @@ export const fallbackGifts = [
     allowCustomAmount: false,
   },
   {
+    id: "contribuicao-livre",
+    name: "Aviãozinho de Dinheiro",
+    description: "Escolha o valor que desejar para nos ajudar nesse novo começo.",
+    priceCents: null,
+    emoji: "+",
+    allowCustomAmount: true,
+  },
+  {
     id: "batedeira-duo-mixer-turbo-4-litros",
     name: "Batedeira Duo Mixer Turbo 4 Litros",
     description: "",
@@ -123,8 +131,8 @@ export const fallbackGifts = [
   },
   {
     id: "casinha-pra-mel",
-    name: "Casinha pra Mel",
-    description: "Um cantinho especial e confortável para a Mel.",
+    name: "Casinha para Mel",
+    description: "",
     priceCents: 30000,
     emoji: "CM",
     allowCustomAmount: false,
@@ -160,14 +168,6 @@ export const fallbackGifts = [
     priceCents: 14999,
     emoji: "CD",
     allowCustomAmount: false,
-  },
-  {
-    id: "contribuicao-livre",
-    name: "Contribuição Livre",
-    description: "Escolha o valor que desejar para nos ajudar nesse novo começo.",
-    priceCents: null,
-    emoji: "+",
-    allowCustomAmount: true,
   },
   {
     id: "cortina-100-vedacao-blackout",
@@ -517,9 +517,10 @@ export const fallbackGifts = [
 
 export const giftImageById: Record<string, string> = {
   "aparelho-de-jantar-e-cha-30-pecas": "/brand/gifts/aparelho-de-jantar-e-cha-30-pecas.jpg",
-  "armario-multiuso-4-portas-e-8-prateleiras": "/brand/gift-header.jpg",
+  "armario-multiuso-4-portas-e-8-prateleiras": "/brand/gifts/armario-multiuso-4-portas-e-8-prateleiras.jpg",
   "aspirador-de-po-e-agua-1200w": "/brand/gifts/aspirador-de-po-e-agua-1200w.jpg",
   "aspirador-de-po-vertical-2-em-1": "/brand/gifts/aspirador-de-po-vertical-2-em-1.jpg",
+  "contribuicao-livre": "/brand/gifts/contribuicao-livre.jpg",
   "batedeira-duo-mixer-turbo-4-litros": "/brand/gifts/batedeira-duo-mixer-turbo-4-litros.jpg",
   "batedeira-planetaria-preta": "/brand/gifts/batedeira-planetaria-preta.jpg",
   "blender-2-jarras-700w": "/brand/gifts/blender-2-jarras-700w.jpg",
@@ -534,7 +535,6 @@ export const giftImageById: Record<string, string> = {
   "chaleira-eletrica-com-desligamento-automatico": "/brand/gifts/chaleira-eletrica-com-desligamento-automatico.jpg",
   "churrasqueira-eletrica-antiaderente": "/brand/gifts/churrasqueira-eletrica-antiaderente.jpg",
   "conjunto-de-facas-com-suporte-7-pecas": "/brand/gifts/conjunto-de-facas-com-suporte-7-pecas.jpg",
-  "contribuicao-livre": "/brand/gifts/contribuicao-livre.jpg",
   "cortina-100-vedacao-blackout": "/brand/gifts/cortina-100-vedacao-blackout.jpg",
   "lua-de-mel": "/brand/gifts/lua-de-mel.jpg",
   "edredom-queen-plush-cinza": "/brand/gifts/edredom-queen-plush-cinza.jpg",
