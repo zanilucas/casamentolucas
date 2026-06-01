@@ -59,11 +59,10 @@ export default async function GiftsPage() {
                   alt=""
                   loading="eager"
                 />
-                <span className="gift-emoji">{gift.emoji || "+"}</span>
               </div>
               <div className="gift-content">
                 <h2 className="gift-name">{gift.name}</h2>
-                <p className="gift-desc">{gift.description}</p>
+                {gift.description ? <p className="gift-desc">{gift.description}</p> : null}
                 <div className="gift-value">
                   {gift.allow_custom_amount || !gift.price_cents ? "Valor livre" : formatMoney(gift.price_cents)}
                 </div>
